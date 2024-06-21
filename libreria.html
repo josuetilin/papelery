@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title" data-es="venta libretas" data-en="Notebook ">Venta de libro </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .carrito-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .carrito-item {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+            width: 300px;
+            padding-bottom: 15px;
+        }
+        .carrito-item img {
+            width: 100%;
+            height: auto;
+        }
+        .carrito-details {
+            padding: 15px;
+        }
+        .carrito-details h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .carrito-details p {
+            color: #333;
+            font-size: 1em;
+        }
+        .buy-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+        .contact-info {
+            max-width: 50%;
+        }
+        .contact-form {
+            max-width: 45%;
+        }
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form label, .contact-form input, .contact-form textarea, .contact-form button {
+            margin-bottom: 10px;
+        }
+        .contact-form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .social-media a {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="#" class="logo">
+                <img src="imagenes/logo papleria.png" alt="">
+            </a>
+            <h1 class="site-title" id="site-title" data-es="Papelería Ma&Lop Tienda de Arte" data-en="Ma&Lop Stationery Art Store">Papelería Ma&Lop Tienda de Arte</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="Inicio" data-es="Inicio" data-en="Home">Inicio</a></li>
+                <li>
+                    <a href="NOSOTROS" data-es="NOSOTROS" data-en="ABOUT US">NOSOTROS <span class="arrow">&#9662;</span></a>
+                    <ul class="submenu">
+                        
+                        <li><a href="mision.html" id="mision" data-es="Misión" data-en="Mission">Misión</a></li>
+                        <li><a href="vision.html" id="vision" data-es="Visión" data-en="Vision">Visión</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="ARTICULOS" data-es="ARTICULOS" data-en="ARTICLES">ARTICULOS <span class="arrow">&#9662;</span></a>
+                    <ul class="submenu">
+                        <li><a href="materiales.html" id="materiales" data-es="Materiales" data-en="Materials">Materiales</a></li>
+                        <li><a href="libreria.html" id="libreria" data-es="Librería" data-en="Bookstore">Librería</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="MANUALIDADES" data-es="MANUALIDADES" data-en="HANDICRAFTS">MANUALIDADES <span class="arrow">&#9662;</span></a>
+                    <ul class="submenu">
+                        <li><a href="decoraciones.html" id="decoraciones" data-es="Decoraciones" data-en="Decorations">Decoraciones</a></li>
+                        <li><a href="regalitos.html" id="regalitos" data-es="Regalitos" data-en="Gifts">Regalitos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="JUGUETES" data-es="JUGUETES" data-en="TOYS">JUGUETES <span class="arrow">&#9662;</span></a>
+                    <ul class="submenu">
+                        <li><a href="muñecas.html" id="muñecas" data-es="Muñecas" data-en="Dolls">Muñecas</a></li>
+                        <li><a href="carritos.html" id="carritos" data-es="Carritos" data-en="Cars">Carritos</a></li>
+                    </ul>
+               
+                <li>
+                    <button id="btn-es" onclick="changeLanguage('es')">Español</button>
+                    <button id="btn-en" onclick="changeLanguage('en')">English</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="libreta-section">
+            <h2 id="libreta-title" data-es="Carritos en Venta" data-en="Cars for Sale">Carritos en Venta</h2>
+            <div class="libreta-container">
+                <div class="libreta-item">
+                    <img src="libretas/images (1).jpg" alt="Carrito 1">
+                    <div class="libreta-details">
+                        <h3 id="libreta-nombre" data-es="libreta" data-en="Notebook">libreta</h3>
+                        <p id="libreta-precio" data-es="$150.00" data-en="$150.00">$50.00</p>
+                        <button class="buy-button" data-es="Comprar" data-en="Buy" onclick="comprar('libreta', '$150.00')">Comprar</button>
+                    </div>
+                </div>
+                <div class="carrito-item">
+                    <img src="libretas/images (2).jpg" alt="Carrito 2">
+                    <div class="libreta-details">
+                        <h3 id="libreta-nombre" data-es="libreta" data-en="Notebook">libreta</h3>
+                        <p id="libreta-precio" data-es="$120.00" data-en="$120.00">$120.00</p>
+                        <button class="buy-button" data-es="Comprar" data-en="Buy" onclick="comprar('libreta', '$120.00')">Comprar</button>
+                    </div>
+                </div>
+                <div class="libreta-item">
+                    <img src="libretas/images.jpg" alt="Carrito 3">
+                    <div class="libreta-details">
+                        <h3 id="libreta-nombre" data-es="Carrito Todoterreno" data-en="Notebook">Carrito Todoterreno</h3>
+                        <p id="libretaarrito3-precio" data-es="$180.00" data-en="$180.00">$180.00</p>
+                        <button class="buy-button" data-es="Comprar" data-en="Buy" onclick="comprar('libreta', '$180.00')">Comprar</button>
+                    </div>
+                </div>
+                <div class="carrito-item">
+                    <img src="libretas/Libreta.jpg" alt="Carrito 4">
+                    <div class="-details">
+                        <h3 id="libreta-nombre" data-es="Carrito de Carreras" data-en="Notebook">Carrito de Carreras</h3>
+                        <p id="libreta-precio" data-es="$200.00" data-en="$200.00">$200.00</p>
+                        <button class="buy-button" data-es="Comprar" data-en="Buy" onclick="comprar('libreta', '$200.00')">Comprar</button>
+                    </div>
+                </div>
+                <div class="libreta-item">
+                    <img src="libretas/Libreta4.jpg" alt="libreta">
+                    <div class="libreta-details">
+                        <h3 id="libreta-nombre" data-es="libreta" data-en="Notebook">libreta</h3>
+                        <p id="libreta-precio" data-es="$100.00" data-en="$100.00">$100.00</p>
+                        <button class="buy-button" data-es="Comprar" data-en="Buy" onclick="comprar('libreta', '$100.00')">Comprar</button>
+                    </div>
+                </div>
+                <div class="carrito-item">
+                    <img src="libretas/libreta5.jpg" alt="libreta">
+                    <div class="libreta-details">
+                        <h3 id="libreta-nombre" data-es="libreta" data-en="Notebook">libreta SUV</h3>
+                        <p id="libreta-precio" data-es="$220.00" data-en="$220.00">$220.00</p>
+                        <button class="buy-button" data-es="Comprar" data-en="Buy" onclick="comprar('libreta', '$220.00')">Comprar</button>
+                    </div>
+                </div>
+                <div class="carrito-item">
+                    <img src="libretas/one librera.jpg" alt="libreta">
+                    <div class="libreta-details">
+                        <h3 id="libreta-nombre" data-es="libreta" data-en="Notebook">libreta</h3>
+                        <p id="libreta-precio" data-es="libreta" data-en="$130.00">libreta</p>
+                        <button class="buy-button" data-es="Comprar" data-en="Buy" onclick="comprar('libreta', '$130.00')">libretar</button>
+                    </div>
+                </div>
+                <div class="carrito-item">
+                    <img src="libretas/Simson libreta.jpg" alt="libreta">
+                    <div class="carrito-details">
+                        <h3 id="libreta-nombre" data-es="Carrito Convertible" data-en="Notebook">libreta</h3>
+                        <p id="libreta-precio" data-es="$80.00" data-en="$800.00">$800.00</p>
+                        <button class="buy-button" data-es="Comprar" data-en="Buy" onclick="comprar('Carrito Convertible', '$80.00')">Comprar</button>
+                    </div>
+                </div>
+                <div class="carrito-item">
+                    <img src="libretas/Libreta3.jpg" alt="Carrito 9">
+                    <div class="carrito-details">
+                        <h3 id="carrito9-nombre" data-es="Carrito Monster Truck" data-en="Notebook">Carrito Monster Truck</h3>
+                        <p id="carrito9-precio" data-es="$250.00" data-en="$250.00">$250.00</p>
+                        <button class="buy-button" data-es="Comprar" data-en="Buy" onclick="comprar('Carrito Monster Truck', '$250.00')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="logo-section">
+            <div class="social-media">
+                <a href="https://www.facebook.com/profile.php?id=100063504823811&mibextid=ZbWKwL"><img src="imagenes/Facebook_Logo_(2019) (1).png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/ma__lop?igsh=bXhqZmx1MzB5ZDZs"><img src="imagenes/Instagram_logo_2022.svg (1).png" alt="Instagram"></a>
+            </div>
+            <div class="logo-container">
+                <a href="#"><img src="imagenes/logo papleria.png" alt=""></a>
+            </div>
+        </section>
+
+        <section class="contacto">
+            <h2 id="contacto-title" data-es="CONTACTO" data-en="CONTACT">CONTACTO</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <img src="imagenes/logo papleria.png" alt="">
+                    <h3 id="correo-title" data-es="Correo" data-en="Email">Correo</h3>
+                    <p id="correo" data-es="info@PapeleríaMa&LopTiendadeArte.com" data-en="info@Ma&LopStationeryArtStore.com">info@Papelería Ma&Lop Tienda de Arte.com</p>
+                    <h3 id="biografia-title" data-es="Biografía" data-en="Biography">Biografía</h3>
+                    <p id="biografia" data-es="Diseñado Por Mementos System Inc, Sitio web creado 21/06/2024." data-en="Designed By Mementos System Inc, Website created 06/21/2024.">Diseñado Por Mementos System Inc, Sitio web creado 21/06/2024.</p>
+                </div>
+                <div class="contact-form">
+                    <form action="#">
+                        <label for="nombre" id="nombre-label" data-es="Nombre:" data-en="Name:">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre">
+                        <label for="apellido" id="apellido-label" data-es="Apellido:" data-en="Surname:">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido">
+                        <label for="email" id="email-label" data-es="Email:" data-en="Email:">Email:</label>
+                        <input type="email" id="email" name="email">
+                        <label for="mensaje" id="mensaje-label" data-es="Mensaje:" data-en="Message:">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje"></textarea>
+                        <button type="submit" id="enviar-button" data-es="Enviar" data-en="Send">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function comprar(nombre, precio) {
+            const form = `
+                <div id="purchase-form">
+                    <h3>${document.documentElement.getAttribute('lang') === 'es' ? 'Compra de' : 'Purchase of'} ${nombre}</h3>
+                    <p>${document.documentElement.getAttribute('lang') === 'es' ? 'Precio:' : 'Price:'} ${precio}</p>
+                    <form action="#" id="form-compra">
+                        <label for="direccion">${document.documentElement.getAttribute('lang') === 'es' ? 'Dirección:' : 'Address:'}</label>
+                        <input type="text" id="direccion" name="direccion" required>
+                        <label for="telefono">${document.documentElement.getAttribute('lang') === 'es' ? 'Teléfono:' : 'Phone:'}</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                        <label for="email">${document.documentElement.getAttribute('lang') === 'es' ? 'Email:' : 'Email:'}</label>
+                        <input type="email" id="email-compra" name="email" required>
+                        <button type="submit">${document.documentElement.getAttribute('lang') === 'es' ? 'Enviar Pedido' : 'Submit Order'}</button>
+                    </form>
+                    <button onclick="cerrarFormulario()">${document.documentElement.getAttribute('lang') === 'es' ? 'Cerrar' : 'Close'}</button>
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', form);
+        }
+
+        function cerrarFormulario() {
+            const form = document.getElementById('purchase-form');
+            form.remove();
+        }
+
+        function changeLanguage(lang) {
+            document.documentElement.setAttribute('lang', lang);
+            document.querySelectorAll('[data-es][data-en]').forEach(function(element) {
+                element.textContent = lang === 'es' ? element.getAttribute('data-es') : element.getAttribute('data-en');
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var lang = document.documentElement.getAttribute('lang');
+            changeLanguage(lang);
+        });
+    </script>
+</body>
+</html>

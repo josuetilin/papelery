@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+}
+
+.header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.header .site-title {
+    font-size: 24px;
+}
+
+nav {
+    background-color: #444;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    padding: 15px 20px;
+    display: block;
+    text-decoration: none;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #555;
+}
+
+nav ul li ul.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li:hover ul.submenu {
+    display: block;
+}
+
+nav ul li ul.submenu li a {
+    padding: 10px 20px;
+}
+
+.slider-box {
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+}
+
+.slider-box ul {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-box ul li {
+    min-width: 100%;
+}
+
+.slider-box img {
+    width: 100%;
+    height: auto;
+}
+
+.info-section {
+    text-align: center;
+    padding: 2em 0;
+}
+
+.people-section {
+    text-align: center;
+    padding: 2em 0;
+}
+
+.people-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.person-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.juguetes-section {
+    padding: 2em;
+}
+
+.juguetes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.juguete-item {
+    border: 1px solid #ddd;
+    padding: 1em;
+    text-align: center;
+    width: calc(20% - 2em);
+    box-sizing: border-box;
+}
+
+.juguete-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.juguete-nombre {
+    font-weight: bold;
+    margin: 0.5em 0;
+}
+
+.juguete-precio {
+    color: #888;
+}
+
+.contacto {
+    text-align: center;
+    padding: 2em 0;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.contact-info img {
+    width: 100px;
+    height: auto;
+}
+
+.contact-form {
+    max-width: 500px;
+    width: 100%;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 1em 2em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAPELERIA LA CLAUDIA - Muñecas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #f8f8f8;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .site-title {
+            font-size: 24px;
+            margin: 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        nav ul li {
+            position: relative;
+        }
+        nav ul li a {
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            color: #333;
+        }
+        nav ul li a:hover,
+        nav ul li a:focus {
+            background-color: #ddd;
+        }
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: #fff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        nav ul li:hover .submenu {
+            display: block;
+        }
+        .submenu li {
+            width: 200px;
+        }
+        .arrow {
+            margin-left: 5px;
+        }
+        .slider-box img {
+            width: 100%;
+            height: auto;
+        }
+        .info-section,
+        .people-section,
+        .toys-section {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .info-section h1,
+        .people-section h2,
+        .toys-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .toy-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .toy-item {
+            width: calc(25% - 20px);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .toy-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        footer {
+            background-color: #f8f8f8;
+            padding: 20px 0;
+            border-top: 1px solid #ddd;
+        }
+        footer .logo-container,
+        footer .contact-info,
+        footer .social-media {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .social-media a {
+            margin: 0 10px;
+        }
+        .social-media img {
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="#" class="logo">
+                <img src="imagenes/logo papleria.png" alt="Logo">
+            </a>
+            <h1 class="site-title" id="site-title" data-es="Papelería Ma&Lop Tienda de Arte" data-en="Ma&Lop Stationery Art Store">Papelería Ma&Lop Tienda de Arte</h1>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="NOSOTROS" data-es="NOSOTROS" data-en="ABOUT US">NOSOTROS <span class="arrow">&#9662;</span></a>
+                    <ul class="submenu">
+                        <li><a href="mision.html" id="mision" data-es="Misión" data-en="Mission">Misión</a></li>
+                        <li><a href="vision.html" id="vision" data-es="Visión" data-en="Vision">Visión</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="ARTICULOS" data-es="ARTICULOS" data-en="ARTICLES">ARTICULOS <span class="arrow">&#9662;</span></a>
+                    <ul class="submenu">
+                        <li><a href="materiales.html" id="materiales" data-es="Materiales" data-en="Materials">Materiales</a></li>
+                        <li><a href="libreria.html" id="libreria" data-es="Librería" data-en="Bookstore">Librería</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="MANUALIDADES" data-es="MANUALIDADES" data-en="HANDICRAFTS">MANUALIDADES <span class="arrow">&#9662;</span></a>
+                    <ul class="submenu">
+                        <li><a href="decoraciones.html" id="decoraciones" data-es="Decoraciones" data-en="Decorations">Decoraciones</a></li>
+                        <li><a href="regalitos.html" id="regalitos" data-es="Regalitos" data-en="Gifts">Regalitos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="JUGUETES" data-es="JUGUETES" data-en="TOYS">JUGUETES <span class="arrow">&#9662;</span></a>
+                    <ul class="submenu">
+                        <li><a href="muñecas.html" id="muñecas" data-es="Muñecas" data-en="Dolls">Muñecas</a></li>
+                        <li><a href="carritos.html" id="carritos" data-es="Carritos" data-en="Cars">Carritos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button id="btn-es" onclick="changeLanguage('es')">Español</button>
+                    <button id="btn-en" onclick="changeLanguage('en')">English</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="toys-section">
+            <h2 id="muñecas-title" data-es="Muñecas" data-en="Dolls">Muñecas</h2>
+            <div class="toy-container">
+                <div class="toy-item">
+                    <img src="imagenes/muñeca1.jpeg" alt="Muñeca 1">
+                    <p id="muñeca1" data-es="Muñeca 1" data-en="Doll 1">Muñeca 1</p>
+                </div>
+                <div class="toy-item">
+                    <img src="imagenes/muñeca2.jpeg" alt="Muñeca 2">
+                    <p id="muñeca2" data-es="Muñeca 2" data-en="Doll 2">Muñeca 2</p>
+                </div>
+                <div class="toy-item">
+                    <img src="imagenes/muñeca3.jpeg" alt="Muñeca 3">
+                    <p id="muñeca3" data-es="Muñeca 3" data-en="Doll 3">Muñeca 3</p>
+                </div>
+                <div class="toy-item">
+                    <img src="imagenes/muñeca4.jpeg" alt="Muñeca 4">
+                    <p id="muñeca4" data-es="Muñeca 4" data-en="Doll 4">Muñeca 4</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="logo-container">
+            <a href="#" class="logo">
+                <img src="imagenes/logo papleria.png" alt="Logo">
+            </a>
+        </div>
+        <div class="social-media">
+            <a href="#"><img src="imagenes/WhatsApp_icon.png.webp" alt="WhatsApp"></a>
+            <a href="#"><img src="imagenes/Facebook_Logo_(2019) (1).png" alt="Facebook"></a>
+            <a href="#"><img src="imagenes/Instagram_logo_2022.svg (1).png" alt="Instagram"></a>
+        </div>
+        <div class="contact-info">
+            <h3 id="correo-title" data-es="Correo" data-en="Email">Correo</h3>
+            <p id="correo" data-es="info@PapeleríaMa&LopTiendadeArte.com" data-en="info@Ma&LopStationeryArtStore.com">info@PapeleríaMa&LopTiendadeArte.com</p>
+            <h3 id="biografia-title" data-es="Biografía" data-en="Biography">Biografía</h3>
+            <p id="biografia" data-es="Diseñado Por Mementos System Inc, Sitio web creado 21/06/2024." data-en="Designed By Mementos System Inc, Website created 06/21/2024.">Diseñado Por Mementos System Inc, Sitio web creado 21/06/2024.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

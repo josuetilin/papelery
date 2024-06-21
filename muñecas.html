@@ -1,0 +1,217 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAPELERIA LA CLAUDIA - Muñecas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        header {
+            background-color: #000;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .site-title {
+            font-size: 24px;
+            margin: 0;
+            color: #fff;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        nav ul li {
+            position: relative;
+            margin-left: 20px;
+        }
+        nav ul li:first-child {
+            margin-left: 0;
+        }
+        nav ul li a {
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            color: #fff;
+        }
+        nav ul li a:hover,
+        nav ul li a:focus {
+            background-color: #333;
+        }
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: #333;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        nav ul li:hover .submenu {
+            display: block;
+        }
+        .submenu li {
+            width: 200px;
+        }
+        .arrow {
+            margin-left: 5px;
+        }
+        .toys-section {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .toys-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #333;
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .toy-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px 0;
+        }
+        .toy-item {
+            width: calc(25% - 20px);
+            margin-bottom: 20px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+        .toy-item:hover {
+            transform: translateY(-5px);
+        }
+        .toy-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .toy-item p {
+            font-size: 16px;
+            color: #555;
+            margin: 0;
+        }
+        footer {
+            background-color: #000;
+            padding: 20px 0;
+            color: #fff;
+            text-align: center;
+        }
+        footer .logo-container,
+        footer .contact-info,
+        footer .social-media {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .social-media a {
+            margin: 0 10px;
+        }
+        .social-media img {
+            height: 30px;
+        }
+        .bio {
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="#" class="logo">
+                <img src="imagenes/logo papleria.png" alt="Logo">
+            </a>
+            <h1 class="site-title" id="site-title" data-es="Papelería Ma&Lop Tienda de Arte" data-en="Ma&Lop Stationery Art Store">Papelería Ma&Lop Tienda de Arte</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-es="Inicio" data-en="Home">Inicio</a></li>
+                <li>
+                    <a href="#" data-es="NOSOTROS" data-en="ABOUT US">NOSOTROS <span class="arrow">&#9662;</span></a>
+                    <ul class="submenu">
+                        <li><a href="mision.html" id="mision" data-es="Misión" data-en="Mission">Misión</a></li>
+                        <li><a href="vision.html" id="vision" data-es="Visión" data-en="Vision">Visión</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" data-es="ARTICULOS" data-en="ARTICLES">ARTICULOS <span class="arrow">&#9662;</span></a>
+                    <ul class="submenu">
+                        <li><a href="materiales.html" id="materiales" data-es="Materiales" data-en="Materials">Materiales</a></li>
+                        <li><a href="libreria.html" id="libreria" data-es="Librería" data-en="Bookstore">Librería</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" data-es="MANUALIDADES" data-en="HANDICRAFTS">MANUALIDADES <span class="arrow">&#9662;</span></a>
+                    <ul class="submenu">
+                        <li><a href="decoraciones.html" id="decoraciones" data-es="Decoraciones" data-en="Decorations">Decoraciones</a></li>
+                        <li><a href="regalitos.html" id="regalitos" data-es="Regalitos" data-en="Gifts">Regalitos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" data-es="JUGUETES" data-en="TOYS">JUGUETES <span class="arrow">&#9662;</span></a>
+                    <ul class="submenu">
+                        <li><a href="muñecas.html" id="muñecas" data-es="Muñecas" data-en="Dolls">Muñecas</a></li>
+                        <li><a href="carritos.html" id="carritos" data-es="Carritos" data-en="Cars">Carritos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contacto" data-es="CONTACTO" data-en="CONTACT">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="toys-section">
+            <h2 id="muñecas-title" data-es="Muñecas" data-en="Dolls">Muñecas</h2>
+            <div class="toy-container">
+                <div class="toy-item">
+                    <img src="Muñecas/Barbie 3 (1).jpg" alt="Muñeca 1">
+                    <p id="muñeca1" data-es="Muñeca 1" data-en="Doll 1">Muñeca 1</p>
+                </div>
+                <div class="toy-item">
+                    <img src="Muñecas/Barbie 3.jpg" alt="Muñeca 2">
+                    <p id="muñeca2" data-es="Muñeca 2" data-en="Doll 2">Muñeca 2</p>
+                </div>
+                <div class="toy-item">
+                    <img src="Muñecas/Barbie.jpg" alt="Muñeca 3">
+                    <p id="muñeca3" data-es="Muñeca 3" data-en="Doll 3">Muñeca 3</p>
+                </div>
+                <div class="toy-item">
+                    <img src="Muñecas/bb4.jpg" alt="Muñeca 4">
+                    <p id="muñeca4" data-es="Muñeca 4" data-en="Doll 4">Muñeca 4</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>

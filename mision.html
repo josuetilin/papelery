@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misión - Papelería Ma&Lop Tienda de Arte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <img src="imagenes/logo papleria.png" alt="Logo Papelería Ma&Lop">
+            </a>
+            <h1 class="site-title" id="site-title" data-es="Papelería Ma&Lop Tienda de Arte" data-en="Ma&Lop Stationery Art Store">Papelería Ma&Lop Tienda de Arte</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-es="INICIO" data-en="HOME">INICIO</a></li>
+                <li><a href="NOSOTROS" data-es="NOSOTROS" data-en="ABOUT US">NOSOTROS <span class="arrow">&#9662;</span></a>
+                    <ul class="submenu">
+                        <li><a href="mision.html" id="mision" data-es="Misión" data-en="Mission">Misión</a></li>
+                        <li><a href="vision.html" id="vision" data-es="Visión" data-en="Vision">Visión</a></li>
+                    </ul>
+                </li>
+                <li><a href="ARTICULOS" data-es="ARTICULOS" data-en="ARTICLES">ARTICULOS <span class="arrow">&#9662;</span></a>
+                    <ul class="submenu">
+                        <li><a href="materiales.html" id="materiales" data-es="Materiales" data-en="Materials">Materiales</a></li>
+                        <li><a href="libreria.html" id="libreria" data-es="Librería" data-en="Bookstore">Librería</a></li>
+                    </ul>
+                </li>
+                <li><a href="MANUALIDADES" data-es="MANUALIDADES" data-en="HANDICRAFTS">MANUALIDADES <span class="arrow">&#9662;</span></a>
+                    <ul class="submenu">
+                        <li><a href="decoraciones.html" id="decoraciones" data-es="Decoraciones" data-en="Decorations">Decoraciones</a></li>
+                        <li><a href="regalitos.html" id="regalitos" data-es="Regalitos" data-en="Gifts">Regalitos</a></li>
+                    </ul>
+                </li>
+                <li><a href="JUGUETES" data-es="JUGUETES" data-en="TOYS">JUGUETES <span class="arrow">&#9662;</span></a>
+                    <ul class="submenu">
+                        <li><a href="muñecas.html" id="muñecas" data-es="Muñecas" data-en="Dolls">Muñecas</a></li>
+                        <li><a href="carritos.html" id="carritos" data-es="Carritos" data-en="Cars">Carritos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button id="btn-es" onclick="changeLanguage('es')">Español</button>
+                    <button id="btn-en" onclick="changeLanguage('en')">English</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="mision-section">
+            <h2 id="mision-title" data-es="Nuestra Misión" data-en="Our Mission">Nuestra Misión</h2>
+            <p id="mision-content" data-es="En Papelería Ma&Lop Tienda de Arte, nuestra misión es proporcionar productos de alta calidad que inspiren la creatividad y el aprendizaje en nuestros clientes. Nos esforzamos por ofrecer una amplia gama de artículos de papelería y arte a precios accesibles, fomentando un entorno donde la imaginación pueda florecer." data-en="At Ma&Lop Stationery Art Store, our mission is to provide high-quality products that inspire creativity and learning in our customers. We strive to offer a wide range of stationery and art supplies at affordable prices, fostering an environment where imagination can flourish.">En Papelería Ma&Lop Tienda de Arte, nuestra misión es proporcionar productos de alta calidad que inspiren la creatividad y el aprendizaje en nuestros clientes. Nos esforzamos por ofrecer una amplia gama de artículos de papelería y arte a precios accesibles, fomentando un entorno donde la imaginación pueda florecer.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="logo-container">
+            <a href="index.html"><img src="imagenes/logo papleria.png" alt="Logo Papelería Ma&Lop"></a>
+        </div>
+        <div class="social-media">
+        
+            <a href="https://www.facebook.com/profile.php?id=100063504823811&mibextid=ZbWKwL"><img src="imagenes/Facebook_Logo_(2019) (1).png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/ma__lop?igsh=bXhqZmx1MzB5ZDZs"><img src="imagenes/Instagram_logo_2022.svg (1).png" alt="Instagram"></a>
+        </div>
+        <div class="contact-info">
+            <h3 id="correo-title" data-es="Correo" data-en="Email">Correo</h3>
+            <p id="correo" data-es="info@PapeleríaMa&LopTiendadeArte.com" data-en="info@Ma&LopStationeryArtStore.com">info@PapeleríaMa&LopTiendadeArte.com</p>
+            <h3 id="biografia-title" data-es="Biografía" data-en="Biography">Biografía</h3>
+            <p id="biografia" data-es="Diseñado Por Mementos System Inc, Sitio web creado 21/06/2024." data-en="Designed By Mementos System Inc, Website created 06/21/2024.">Diseñado Por Mementos System Inc, Sitio web creado 21/06/2024.</p>
+        </div>
+    </footer>
+
+    <script>
+        function changeLanguage(lang) {
+            document.documentElement.setAttribute('lang', lang);
+            document.querySelectorAll('[data-es][data-en]').forEach(function(element) {
+                element.textContent = lang === 'es' ? element.getAttribute('data-es') : element.getAttribute('data-en');
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var lang = document.documentElement.getAttribute('lang');
+            changeLanguage(lang);
+        });
+    </script>
+</body>
+</html>
